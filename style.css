@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/* CSS VARIABLES */
+:root {
+  /* TYPOGRAPHY */
+  --main-font: 'Josefin Sans', sans-serif;
+  --font-size-large: 60px;
+  --font-size-normal: 20px;
+  /* COLORS */
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-grey: #585858;
+  --color-orange: #f25f25;
+  --color-blue: #8eb5e0; 
+}
+
+/* BASIC CSS RESET  */
+html {
+  box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+  
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: var(--main-font);
+  font-size: var(--font-size-normal);
+}
+  
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* MAIN CSS */
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loader {
+  visibility: hidden;
+  position: fixed;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, .8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.loader-text {
+  font-size: var(--font-size-large);
+  margin-top: 2.2rem;
+  color: var(--color-primary);
+}
+
+.main-history {
+  border: 1px solid var(--color-grey);
+  border-radius: 1rem;
+  width: 40%;
+  height: 4rem;
+  overflow-y: scroll;
+  background: var(--color-grey);
+}
+
+.main-title {
+  font-size: var(--font-size-large);
+  padding-bottom: 2rem;
+}
+
+.main-img__container {
+  padding: 2rem;
+  width: 40%;
+}
+
+.main-input__container {
+  width: 40%;
+}
+
+.main-result {
+  width: 100%;
+  height: 4rem;
+}
+
+.main-input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+}
+
+.main-input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: var(--color-grey);
+  opacity: .5;
+  font-family: var(--main-font);
+}
+
+.main-result {
+  border: none;
+  border-radius: 1rem;
+  color: var(--color-secondary);
+  padding: 1rem;
+}
+
+.main-btn {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--color-blue);
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: background-color .5s ease-in-out;
+}
+
+.main-btn:focus {
+  outline: none;
+}
+.main-btn:active {
+  transform: translateY(2px);
+}
+
+.main-btn:hover {
+  background-color: var(--color-orange);
+}
